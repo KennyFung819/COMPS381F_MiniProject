@@ -326,11 +326,12 @@ app.post('/api/restaurant/create',function(req,res){
                 };
                 res.end(JSON.stringify(resObj));
             }
+	
         });
     });
 });
 
-app.get('/api/restaurant/read/:criteria/:criValue',function(req,res){
+app.get('/api/restaurant/:criteria/:criValue',function(req,res){
     var criStr = req.params.criteria;
     var criValue = req.params.criValue;
     var criObj;
